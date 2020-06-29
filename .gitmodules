@@ -111,3 +111,6 @@
 [submodule "Plugins/Source/AutoOpen"]
 	path = Plugins/Source/AutoOpen
 	url = https://github.com/IlliumIv/AutoOpen.git
+[submodule "Plugins/Source/Delve"]
+	path = Plugins/Source/Delve
+	url = https://github.com/IlliumIv/Delve.git
