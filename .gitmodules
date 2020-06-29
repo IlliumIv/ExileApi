@@ -1,14 +1,6 @@
-[submodule "Plugins/Source/HealthBars"]
-	path = Plugins/Source/HealthBars
-	url = https://github.com/TehCheat/HealthBars
-	branch = master
 [submodule "Plugins/Source/IconsBuilder"]
 	path = Plugins/Source/IconsBuilder
 	url = https://github.com/TehCheat/IconsBuilder
-	branch = master
-[submodule "Plugins/Source/FullRareSetManager"]
-	path = Plugins/Source/FullRareSetManager
-	url = https://github.com/TehCheat/FullRareSetManager
 	branch = master
 [submodule "Plugins/Source/MineDetonator"]
 	path = Plugins/Source/MineDetonator
@@ -30,22 +22,6 @@
 	path = Plugins/Source/DevTree
 	url = https://github.com/TehCheat/DevTree
 	branch = master
-[submodule "Plugins/Source/AdvancedUberLabLayout"]
-	path = Plugins/Source/AdvancedUberLabLayout
-	url = https://github.com/TehCheat/AdvancedUberLabLayout
-	branch = master
-[submodule "Plugins/Source/AdvancedTooltip"]
-	path = Plugins/Source/AdvancedTooltip
-	url = https://github.com/TehCheat/AdvancedTooltip
-	branch = master
-[submodule "Plugins/Source/BasicFlaskRoutine"]
-	path = Plugins/Source/BasicFlaskRoutine
-	url = https://github.com/TehCheat/BasicFlaskRoutine
-	branch = master
-[submodule "Plugins/Source/AutoOpen"]
-	path = Plugins/Source/AutoOpen
-	url = https://github.com/ravand1990/AutoOpen
-	branch = master
 [submodule "Plugins/Source/DPSMeter"]
 	path = Plugins/Source/DPSMeter
 	url = https://github.com/TehCheat/DPSMeter
@@ -62,33 +38,13 @@
 	path = Plugins/Source/KillCounter
 	url = https://github.com/TehCheat/KillCounter
 	branch = master
-[submodule "Plugins/Source/MinimapIcons"]
-	path = Plugins/Source/MinimapIcons
-	url = https://github.com/TehCheat/MinimapIcons
-	branch = master
-[submodule "Plugins/Source/MiscInformation"]
-	path = Plugins/Source/MiscInformation
-	url = https://github.com/TehCheat/MiscInformation
-	branch = master
 [submodule "Plugins/Source/PassiveSkillTreePlanter"]
 	path = Plugins/Source/PassiveSkillTreePlanter
 	url = https://github.com/TehCheat/PassiveSkillTreePlanter
 	branch = master
-[submodule "Plugins/Source/Pickit"]
-	path = Plugins/Source/Pickit
-	url = https://github.com/TehCheat/Pickit
-	branch = master
-[submodule "Plugins/Source/PreloadAlert"]
-	path = Plugins/Source/PreloadAlert
-	url = https://github.com/TehCheat/PreloadAlert
-	branch = master
 [submodule "Plugins/Source/SkillDPS"]
 	path = Plugins/Source/SkillDPS
 	url = https://github.com/TehCheat/SkillDPS
-	branch = master
-[submodule "Plugins/Source/Stashie"]
-	path = Plugins/Source/Stashie
-	url = https://github.com/TehCheat/Stashie
 	branch = master
 [submodule "Plugins/Source/AutoQuit"]
 	path = Plugins/Source/AutoQuit
@@ -98,3 +54,60 @@
 	path = Plugins/Source/DelveWalls
 	url = https://github.com/TehCheat/DelveWalls
 	branch = master
+[submodule "Plugins/Source/AdvancedTooltip"]
+	path = Plugins/Source/AdvancedTooltip
+	url = https://github.com/IlliumIv/AdvancedTooltip.git
+[submodule "Plugins/Source/AdvancedUberLabLayout"]
+	path = Plugins/Source/AdvancedUberLabLayout
+	url = https://github.com/IlliumIv/AdvancedUberLabLayout.git
+[submodule "Plugins/Source/AutoSkill"]
+	path = Plugins/Source/AutoSkill
+	url = https://github.com/IlliumIv/AutoSkill.git
+[submodule "Plugins/Source/BasicFlaskRoutine"]
+	path = Plugins/Source/BasicFlaskRoutine
+	url = https://github.com/IlliumIv/BasicFlaskRoutine.git
+[submodule "Plugins/Source/BladeFlurryCharges"]
+	path = Plugins/Source/BladeFlurryCharges
+	url = https://github.com/IlliumIv/BladeFlurryCharges.git
+[submodule "Plugins/Source/DeliriumSpawnerHighlight"]
+	path = Plugins/Source/DeliriumSpawnerHighlight
+	url = https://github.com/IlliumIv/DeliriumSpawnerHighlight.git
+[submodule "Plugins/Source/FullRareSetManager"]
+	path = Plugins/Source/FullRareSetManager
+	url = https://github.com/IlliumIv/FullRareSetManager.git
+[submodule "Plugins/Source/Get-Chaos-Value"]
+	path = Plugins/Source/Get-Chaos-Value
+	url = https://github.com/IlliumIv/Get-Chaos-Value
+[submodule "Plugins/Source/HealthBars"]
+	path = Plugins/Source/HealthBars
+	url = https://github.com/IlliumIv/HealthBars.git
+[submodule "Plugins/Source/HighlightedItems"]
+	path = Plugins/Source/HighlightedItems
+	url = https://github.com/IlliumIv/HighlightedItems
+[submodule "Plugins/Source/PreloadAlert"]
+	path = Plugins/Source/PreloadAlert
+	url = https://github.com/IlliumIv/PreloadAlert.git
+[submodule "Plugins/Source/Random Features"]
+	path = Plugins/Source/Random Features
+	url = https://github.com/IlliumIv/Random-Features
+[submodule "Plugins/Source/ScourgeArrowCharges"]
+	path = Plugins/Source/ScourgeArrowCharges
+	url = https://github.com/IlliumIv/ScourgeArrowCharges
+[submodule "Plugins/Source/Stashie"]
+	path = Plugins/Source/Stashie
+	url = https://github.com/IlliumIv/Stashie.git
+[submodule "Plugins/Source/Tradie"]
+	path = Plugins/Source/Tradie
+	url = https://github.com/IlliumIv/Tradie
+[submodule "Plugins/Source/MinimapIcons"]
+	path = Plugins/Source/MinimapIcons
+	url = https://github.com/IlliumIv/MinimapIcons.git
+[submodule "Plugins/Source/MiscInformation"]
+	path = Plugins/Source/MiscInformation
+	url = https://github.com/IlliumIv/MiscInformation.git
+[submodule "Plugins/Source/Pickit"]
+	path = Plugins/Source/Pickit
+	url = https://github.com/IlliumIv/Pickit.git
+[submodule "Plugins/Source/AutoOpen"]
+	path = Plugins/Source/AutoOpen
+	url = https://github.com/IlliumIv/AutoOpen.git
