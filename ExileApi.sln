@@ -79,6 +79,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScourgeArrowCharges", "Plug
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tradie", "Plugins\Source\Tradie\Tradie.csproj", "{DBB3C794-72B7-4D5A-99C7-E7E59136C42D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowThemAll", "Plugins\Source\ShowThemAll\ShowThemAll.csproj", "{B7E14BA4-E124-419B-8722-CDE90577A2CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -383,6 +385,14 @@ Global
 		{DBB3C794-72B7-4D5A-99C7-E7E59136C42D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBB3C794-72B7-4D5A-99C7-E7E59136C42D}.Release|x64.ActiveCfg = Release|Any CPU
 		{DBB3C794-72B7-4D5A-99C7-E7E59136C42D}.Release|x64.Build.0 = Release|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Debug|x64.Build.0 = Debug|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Release|x64.ActiveCfg = Release|Any CPU
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -422,6 +432,7 @@ Global
 		{3EFF75B6-8D15-4142-BF18-41BB03AF964A} = {CC061825-B447-4124-8467-9B830EB88F4C}
 		{48BE2DBA-F488-4FCB-BD56-CDFE85ECF4E7} = {CC061825-B447-4124-8467-9B830EB88F4C}
 		{DBB3C794-72B7-4D5A-99C7-E7E59136C42D} = {CC061825-B447-4124-8467-9B830EB88F4C}
+		{B7E14BA4-E124-419B-8722-CDE90577A2CB} = {CC061825-B447-4124-8467-9B830EB88F4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5AD7BE45-2243-42A2-9D8F-2C212D20F7E9}

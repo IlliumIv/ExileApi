@@ -26,10 +26,6 @@
 	path = Plugins/Source/DPSMeter
 	url = https://github.com/TehCheat/DPSMeter
 	branch = master
-[submodule "Plugins/Source/EliteBar"]
-	path = Plugins/Source/EliteBar
-	url = https://github.com/TehCheat/EliteBar
-	branch = master
 [submodule "Plugins/Source/ItemAlert"]
 	path = Plugins/Source/ItemAlert
 	url = https://github.com/TehCheat/ItemAlert
@@ -114,3 +110,9 @@
 [submodule "Plugins/Source/Delve"]
 	path = Plugins/Source/Delve
 	url = https://github.com/IlliumIv/Delve.git
+[submodule "Plugins/Source/ShowThemAll"]
+	path = Plugins/Source/ShowThemAll
+	url = https://github.com/IlliumIv/ShowThemAll
+[submodule "Plugins/Source/EliteBar"]
+	path = Plugins/Source/EliteBar
+	url = https://github.com/IlliumIv/EliteBar.git
