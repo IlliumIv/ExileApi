@@ -547,16 +547,19 @@ namespace ExileCore.RenderQ
                 if (height == -1) height = lastFontContainer.Size;
                 var size = MeasureText(text, height);
 
-                switch (align)
+                if ((align & FontAlign.Center) != 0)
                 {
-                    case FontAlign.Left:
-                        break;
-                    case FontAlign.Center:
-                        position.X -= size.X / 2;
-                        break;
-                    case FontAlign.Right:
-                        position.X -= size.X;
-                        break;
+                    position.X -= size.X / 2;
+                }
+
+                if ((align & FontAlign.VerticalCenter) != 0)
+                {
+                    position.Y -= size.Y / 2;
+                }
+
+                if ((align & FontAlign.Right) != 0)
+                {
+                    position.X -= size.X;
                 }
 
                 _backGroundTextWindowPtr.AddText(lastFontContainer.Atlas, lastFontContainer.Size, position,

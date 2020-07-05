@@ -18,7 +18,15 @@ namespace Loader
     {
         public static void Main(string[] args)
         {
-            AskToKillOtherRunningProcesses();
+            try
+            {
+                AskToKillOtherRunningProcesses();
+            }
+            catch
+            {
+                //
+            }
+           
             var loader = new Loader();
             loader.Load(args);
         }

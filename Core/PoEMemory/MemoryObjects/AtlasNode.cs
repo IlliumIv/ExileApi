@@ -13,7 +13,10 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public float PosX => posX != -1 ? posX : posX = M.Read<float>(Address + 0x11D);
         public float PosY => posY != -1 ? posY : posY = M.Read<float>(Address + 0x121);
         public Vector2 DefaulPos => new Vector2(PosX, PosY);
-        public Vector2 Pos => GetPosByLayer(1);
+        public Vector2 PosL1 => GetPosByLayer(1);
+        public Vector2 PosL2 => GetPosByLayer(2);
+        public Vector2 PosL3 => GetPosByLayer(3);
+        public Vector2 PosL4 => GetPosByLayer(4);
 
         //Atlas region: 0x4D
 
