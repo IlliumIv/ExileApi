@@ -13,6 +13,5 @@ namespace GameOffsets
 		[FieldOffset(0xA8)] public Matrix MatrixBytes;
 		[FieldOffset(0x120)] public Vector3 Position;
 		[FieldOffset(0x214)] public float ZFar;
-
     }
 }
