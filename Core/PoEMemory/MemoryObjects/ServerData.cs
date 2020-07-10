@@ -308,6 +308,21 @@ namespace ExileCore.PoEMemory.MemoryObjects
 
         #region Atlas
 
+        public List<byte> RegionIds_Debug
+        {
+            get
+            {
+                var result = new List<byte>();
+
+                for (var i = 0; i < 8; i++)
+                {
+                    result.Add(GetAtlasRegionUpgradesByRegion(i));
+                }
+
+                return result;
+            }
+        }
+
         public byte GetAtlasRegionUpgradesByRegion(int regionId)
         {
             return M.Read<byte>(Address + ServerDataOffsets.ATLAS_REGION_UPGRADES + regionId);
