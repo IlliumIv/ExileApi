@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using ExileCore.PoEMemory.FilesInMemory;
 
 namespace ExileCore.PoEMemory.MemoryObjects
@@ -15,7 +16,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
 
                 return M.ReadStructsArray<BetrayalSyndicateState>(betrayalStateAddr,
                     betrayalStateAddr + BetrayalSyndicateState.STRUCT_SIZE * 14,
-                    BetrayalSyndicateState.STRUCT_SIZE, this);
+                    BetrayalSyndicateState.STRUCT_SIZE, this).Where(x => x.Target != null).ToList();
             }
         }
 

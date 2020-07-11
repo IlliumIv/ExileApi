@@ -557,6 +557,11 @@ namespace ExileCore.RenderQ
                     position.Y -= size.Y / 2;
                 }
 
+                if ((align & FontAlign.Top) != 0)
+                {
+                    position.Y -= size.Y;
+                }
+
                 if ((align & FontAlign.Right) != 0)
                 {
                     position.X -= size.X;

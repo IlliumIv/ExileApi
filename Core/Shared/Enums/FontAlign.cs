@@ -8,6 +8,7 @@ namespace ExileCore.Shared.Enums
         Left = 0,
         Center = 1,
         Right = 2,
-        VerticalCenter = 4
+        VerticalCenter = 4,
+        Top = 8
     }
 }

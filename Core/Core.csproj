@@ -248,6 +248,7 @@
     <Compile Include="PoEMemory\Elements\SkillElement.cs" />
     <Compile Include="PoEMemory\Elements\StashElement.cs" />
     <Compile Include="PoEMemory\Elements\SubterraneanChart.cs" />
+    <Compile Include="PoEMemory\Elements\SyndicatePanel.cs" />
     <Compile Include="PoEMemory\Elements\WindowState.cs" />
     <Compile Include="PoEMemory\Elements\WorldMapElement.cs" />
     <Compile Include="PoEMemory\FileInMemory.cs" />

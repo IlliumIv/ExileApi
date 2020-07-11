@@ -80,7 +80,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public NetworkStateE NetworkState => (NetworkStateE) this.ServerDataStruct.NetworkState;
         public int Latency => ServerDataStruct.Latency;
         public string Guild => NativeStringReader.ReadString(M.Read<long>(Address + 0x70E0), M);
-        public BetrayalData BetrayalData => GetObject<BetrayalData>(M.Read<long>(Address + 0x3C8, 0x718));
+        public BetrayalData BetrayalData => GetObject<BetrayalData>(M.Read<long>(Address + 0x450, 0x728));
 
         public IList<ushort> SkillBarIds
         {

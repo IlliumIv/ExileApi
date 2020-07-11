@@ -70,6 +70,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public WorldMapElement AreaInstanceUi => GetObject<WorldMapElement>(IngameUIElementsStruct.AreaInstanceUi);
         public WorldMapElement WorldMap => GetObject<WorldMapElement>(IngameUIElementsStruct.WorldMap);
         public MetamorphWindowElement MetamorphWindow => GetObject<MetamorphWindowElement>(IngameUIElementsStruct.MetamorphWindow);
+        public SyndicatePanel SyndicatePanel => TheGame.IngameState.UIRoot.GetChildFromIndices(1, 67).AsObject<SyndicatePanel>();
 
         public IList<Tuple<Quest, int>> GetUncompletedQuests
         {
