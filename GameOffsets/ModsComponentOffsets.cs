@@ -10,7 +10,7 @@ namespace GameOffsets
         [FieldOffset(0x30)] public long UniqueName;
         [FieldOffset(0xA8)] public bool Identified;
         [FieldOffset(0xAC)] public int ItemRarity;
-        [FieldOffset(0x9E)] public NativePtrArray implicitMods;
+        [FieldOffset(0xB0)] public NativePtrArray implicitMods;
         [FieldOffset(0xC8)] public NativePtrArray explicitMods;
 		[FieldOffset(0xE0)] public NativePtrArray enchantMods;
 		[FieldOffset(0x190)] public NativePtrArray GetImplicitStats;
