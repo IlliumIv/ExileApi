@@ -6,10 +6,6 @@
 	path = Plugins/Source/MineDetonator
 	url = https://github.com/TehCheat/MineDetonator
 	branch = master
-[submodule "Plugins/Source/MapsExchange"]
-	path = Plugins/Source/MapsExchange
-	url = https://github.com/TehCheat/MapsExchange
-	branch = master
 [submodule "Plugins/Source/BuffUtil"]
 	path = Plugins/Source/BuffUtil
 	url = https://github.com/TehCheat/BuffUtil
@@ -116,3 +112,6 @@
 [submodule "Plugins/Source/EliteBar"]
 	path = Plugins/Source/EliteBar
 	url = https://github.com/IlliumIv/EliteBar.git
+[submodule "Plugins/Source/MapsExchange"]
+	path = Plugins/Source/MapsExchange
+	url = https://github.com/IlliumIv/MapsExchange
