@@ -1,16 +1,6 @@
-﻿using System;
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.Threading;
 using System.Windows.Forms;
-using Microsoft.CodeDom.Providers.DotNetCompilerPlatform;
-using Serilog;
-using SharpDX;
-using SharpDX.Windows;
 
 namespace Loader
 {
@@ -26,7 +16,7 @@ namespace Loader
             {
                 //
             }
-           
+
             var loader = new Loader();
             loader.Load(args);
         }
@@ -36,25 +26,47 @@ namespace Loader
             var currentProcess = Process.GetCurrentProcess();
             var processes = Process.GetProcessesByName(currentProcess.ProcessName);
 
-            if (processes.Length > 1)
-            {
-                var text = "Kill already running HUD process? (program configs will not be saved)";
-                var caption = "Hud process is already running";
-                var msgBoxResult = MessageBox.Show(text, caption, MessageBoxButtons.OKCancel);
+            var repeatAsk = true;
 
-                if (msgBoxResult == DialogResult.OK)
+            while (repeatAsk)
+            {
+                repeatAsk = false;
+                if (processes.Length > 1)
                 {
-                    foreach (var process in processes)
+                    var text = "Kill already running HUD process? No- wait 3sec until hud is closed";
+                    var caption = "Hud process is already running";
+
+                    var msgBoxResult = MessageBox.Show(text, caption, MessageBoxButtons.YesNoCancel);
+
+                    if (msgBoxResult == DialogResult.Retry)
                     {
-                        if (process.Id != currentProcess.Id)
+                        var tries = 0;
+                        while (processes.Length > 1 && tries < 10)
                         {
-                            process.Kill();
+                            processes = Process.GetProcessesByName(currentProcess.ProcessName);
+                            if (processes.Length == 1)
+                                break;
+
+                            Thread.Sleep(300);
+                            tries++;
+                        }
+
+                        repeatAsk = processes.Length > 1;
+                    }
+                    else if (msgBoxResult == DialogResult.OK)
+                    {
+                        foreach (var process in processes)
+                        {
+                            if (process.Id != currentProcess.Id && !process.HasExited)
+                            {
+                                process.Kill();
+                            }
                         }
                     }
-                }
-                else if (msgBoxResult == DialogResult.Cancel)
-                {
-                    currentProcess.Kill();
+                    else if (msgBoxResult == DialogResult.Cancel)
+                    {
+                        currentProcess.Kill();
+                    }
                 }
             }
         }

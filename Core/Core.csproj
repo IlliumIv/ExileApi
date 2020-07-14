@@ -222,6 +222,7 @@
     <Compile Include="PoEMemory\Components\WorldDescription.cs" />
     <Compile Include="PoEMemory\Components\WorldItem.cs" />
     <Compile Include="PoEMemory\Element.cs" />
+    <Compile Include="PoEMemory\Elements\AtlasPanel.cs" />
     <Compile Include="PoEMemory\Elements\InventoryElements\DeliriumInventoryItem.cs" />
     <Compile Include="PoEMemory\Elements\DelveElement.cs" />
     <Compile Include="PoEMemory\Elements\EntityLabel.cs" />

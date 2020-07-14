@@ -44,7 +44,9 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public StashElement StashElement => GetObject<StashElement>(IngameUIElementsStruct.StashElement);
         public InventoryElement InventoryPanel => GetObject<InventoryElement>(IngameUIElementsStruct.InventoryPanel);
         public Element TreePanel => GetObject<Element>(IngameUIElementsStruct.TreePanel);
+        [Obsolete("Use Atlas instead")]
         public Element AtlasPanel => GetObject<Element>(IngameUIElementsStruct.AtlasPanel);
+        public AtlasPanel Atlas => GetObject<AtlasPanel>(IngameUIElementsStruct.AtlasPanel);
         public Map Map => _map ?? (_map = GetObject<Map>(IngameUIElementsStruct.Map));
         public ItemsOnGroundLabelElement ItemsOnGroundLabelElement =>
             GetObject<ItemsOnGroundLabelElement>(IngameUIElementsStruct.itemsOnGroundLabelRoot);

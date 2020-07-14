@@ -12,7 +12,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public WorldArea Area => area != null ? area : area = TheGame.Files.WorldAreas.GetByAddress(M.Read<long>(Address + 0x8));
         public float PosX => posX != -1 ? posX : posX = M.Read<float>(Address + 0x11D);
         public float PosY => posY != -1 ? posY : posY = M.Read<float>(Address + 0x121);
-        public Vector2 DefaulPos => new Vector2(PosX, PosY);
+        public Vector2 DefaultPos => new Vector2(PosX, PosY);
         public Vector2 PosL1 => GetPosByLayer(1);
         public Vector2 PosL2 => GetPosByLayer(2);
         public Vector2 PosL3 => GetPosByLayer(3);
@@ -39,6 +39,20 @@ namespace ExileCore.PoEMemory.MemoryObjects
             const int TIER_START = 0xA5;
 
             return M.Read<int>(Address + TIER_START + layer * sizeof(int));
+        }
+
+        public int GetLayerByTier(int tier)
+        {
+            const int TIER_START = 0xA5;
+
+            for (int i = 0; i < 5; i++)
+            {
+                var tierRead = M.Read<int>(Address + TIER_START + i * sizeof(int));
+                if (tierRead == tier)
+                    return i;
+            }
+
+            return -1;
         }
 
         public bool IsUniqueMap
