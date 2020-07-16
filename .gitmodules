@@ -115,3 +115,6 @@
 [submodule "Plugins/Source/MapsExchange"]
 	path = Plugins/Source/MapsExchange
 	url = https://github.com/IlliumIv/MapsExchange
+[submodule "Plugins/Source/HarvestHelpers"]
+	path = Plugins/Source/HarvestHelpers
+	url = https://github.com/Stridemann/HarvestHelpers.git
