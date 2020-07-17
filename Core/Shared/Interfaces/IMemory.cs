@@ -43,6 +43,7 @@ namespace ExileCore.Shared.Interfaces
         List<T> ReadStructsArray<T>(long startAddress, long endAddress, int structSize, RemoteMemoryObject game)
             where T : RemoteMemoryObject, new();
 
+        List<T> ReadStructsArray<T>(long startAddress, long endAddress, int structSize) where T : struct;
         IList<T> ReadDoublePtrVectorClasses<T>(long address, RemoteMemoryObject game, bool noNullPointers = false)
             where T : RemoteMemoryObject, new();
 

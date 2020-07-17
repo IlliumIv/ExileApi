@@ -186,6 +186,7 @@
     <Compile Include="PoEMemory\Components\DeployedObject.cs" />
     <Compile Include="PoEMemory\Components\DiesAfterTime.cs" />
     <Compile Include="PoEMemory\Components\Flask.cs" />
+    <Compile Include="PoEMemory\Components\HarvestInfrastructure.cs" />
     <Compile Include="PoEMemory\Components\HideoutDoodad.cs" />
     <Compile Include="PoEMemory\Components\Inventories.cs" />
     <Compile Include="PoEMemory\Components\InventoryVisual.cs" />

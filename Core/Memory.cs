@@ -147,6 +147,36 @@ namespace ExileCore
                 {
                     //throw new OverflowException($"Maybe overflow memory in {nameof(ReadStructsArray)} so much structs {size}");
                     DebugWindow.LogError($"Maybe overflow memory in {nameof(ReadStructsArray)} for reading structures of type: {typeof(T).Name}", 3);
+                    return result;
+                }
+            }
+
+            return result;
+        }
+
+        public List<T> ReadStructsArray<T>(long startAddress, long endAddress, int structSize) where T : struct
+        {
+            var result = new List<T>();
+            var i = 0;
+            var size = (endAddress - startAddress) / structSize;
+
+            if (size < 0 || size > 100000)
+            {
+                DebugWindow.LogError($"Maybe overflow memory in {nameof(ReadStructsArray)} for reading structures of type: {typeof(T).Name}", 3);
+                //throw new OverflowException($"Maybe overflow memory in {nameof(ReadStructsArray)} so much structs {size}");
+                return result;
+            }
+
+            for (var address = startAddress; address < endAddress; address += structSize)
+            {
+                result.Add(Read<T>(address));
+                i++;
+
+                if (i > 100000)
+                {
+                    //throw new OverflowException($"Maybe overflow memory in {nameof(ReadStructsArray)} so much structs {size}");
+                    DebugWindow.LogError($"Maybe overflow memory in {nameof(ReadStructsArray)} for reading structures of type: {typeof(T).Name}", 3);
+                    return result;
                 }
             }
 

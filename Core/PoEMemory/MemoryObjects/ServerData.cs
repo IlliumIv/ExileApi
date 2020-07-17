@@ -266,6 +266,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public IList<WorldArea> CompletedAreas => GetAreas(ServerDataStruct.CompletedMaps);
         public IList<WorldArea> ShapedMaps => new List<WorldArea>();// GetAreas(ServerDataStruct.ShapedAreas);
         public IList<WorldArea> BonusCompletedAreas => GetAreas(ServerDataStruct.BonusCompletedAreas);
+        public IList<WorldArea> AwakenedAreas => GetAreas(ServerDataStruct.AwakenedAreas);
         public IList<WorldArea> ElderGuardiansAreas => new List<WorldArea>();// GetAreas(ServerDataStruct.ElderGuardiansAreas);
         public IList<WorldArea> MasterAreas => new List<WorldArea>();// GetAreas(ServerDataStruct.MasterAreas);
         public IList<WorldArea> ShaperElderAreas => new List<WorldArea>();// GetAreas(ServerDataStruct.ElderInfluencedAreas);

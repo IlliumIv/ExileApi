@@ -55,8 +55,8 @@ namespace GameOffsets
 		[FieldOffset(0x7AB8 - Skip)] public long CompletedMaps;//search for a LONG value equals to your current amount of completed maps. Pointer will be under this offset
         [FieldOffset(0x7AF8 - Skip)] public long BonusCompletedAreas;
         [FieldOffset(0x7B38 - Skip)] public long AwakenedAreas;
-        [FieldOffset(0x85E4 - Skip)] public byte MonsterLevel;
-        [FieldOffset(0x85e5 - Skip)] public byte MonstersRemaining;
+        [FieldOffset(0x85EC - Skip)] public byte MonsterLevel;
+        [FieldOffset(0x85ED - Skip)] public byte MonstersRemaining;
         [FieldOffset(0x86A0 - Skip)] public ushort CurrentSulphiteAmount; //Maybe wrong not tested
         [FieldOffset(0x86A4 - Skip)] public int CurrentAzuriteAmount;
     }
