@@ -118,3 +118,6 @@
 [submodule "Plugins/Source/HarvestHelpers"]
 	path = Plugins/Source/HarvestHelpers
 	url = https://github.com/Stridemann/HarvestHelpers.git
+[submodule "Plugins/Source/MapNotify"]
+	path = Plugins/Source/MapNotify
+	url = https://github.com/Lachrymatory/MapNotify.git
