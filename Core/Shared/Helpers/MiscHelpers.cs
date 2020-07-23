@@ -64,6 +64,9 @@ namespace ExileCore.Shared.Helpers
         {
             if (str.LengthWithNullTerminator > 15)
             {
+                if (str.Length <= 0)
+                    return string.Empty;
+
                 if (str.Length < 256)
                     return m.ReadString(str.Buffer, (int) str.Length * 2);
 

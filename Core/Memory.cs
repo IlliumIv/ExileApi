@@ -47,6 +47,7 @@ namespace ExileCore
         public string ReadString(long addr, int length = 256, bool replaceNull = true)
         {
             if (addr <= 65536 && addr >= -1) return string.Empty;
+            if (length <= 0 || length > 1000000) return "TextTooLong";
             var @string = Encoding.ASCII.GetString(ReadMem(new IntPtr(addr), length));
             return replaceNull ? RTrimNull(@string) : @string;
         }

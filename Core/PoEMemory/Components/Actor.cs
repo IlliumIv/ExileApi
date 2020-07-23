@@ -3,6 +3,7 @@ using ExileCore.PoEMemory.MemoryObjects;
 using ExileCore.Shared.Cache;
 using ExileCore.Shared.Enums;
 using GameOffsets;
+using GameOffsets.Native;
 using SharpDX;
 
 namespace ExileCore.PoEMemory.Components
@@ -138,11 +139,11 @@ namespace ExileCore.PoEMemory.Components
             }
 
             private ActionWrapperOffsets Struct => cacheValue.Value;
-            public float DestinationX => Struct.Destination.X;
-            public float DestinationY => Struct.Destination.Y;
-            public Vector2 Destination => Struct.Destination;
+            public int DestinationX => Struct.Destination.X;
+            public int DestinationY => Struct.Destination.Y;
+            public Vector2i Destination => Struct.Destination;
             public Entity Target => GetObject<Entity>(Struct.Target);
-            public Vector2 CastDestination => new Vector2(DestinationX, DestinationY);
+            public Vector2i CastDestination => new Vector2i(DestinationX, DestinationY);
             public ActorSkill Skill => GetObject<ActorSkill>(Struct.Skill);
         }
     }

@@ -10,6 +10,10 @@ namespace ExileCore.Shared.Enums
 
         //Actor is currently playing the "attack" animation, and therefor locked in a cooldown before any other action.
         AbilityCooldownActive = 16,
+
+        //Actor is currently playing the "attack" animation, this is 2 + 16 when running in predictive mode
+        UsingAbilityAbilityCooldown = 18,
+
         Dead = 64,
         Moving = 128,
 

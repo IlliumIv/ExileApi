@@ -6,6 +6,12 @@ namespace ExileCore.PoEMemory.MemoryObjects
     {
         public static string ReadString(long address, IMemory M)
         {
+            return ReadString(address, M, 256);
+        }
+
+        //for compatibility reasons
+        public static string ReadString(long address, IMemory M, int length = 256)
+        {
             var Size = M.Read<uint>(address + 0x10);
             var Capacity = M.Read<uint>(address + 0x18);
 
@@ -15,10 +21,10 @@ namespace ExileCore.PoEMemory.MemoryObjects
             if ( /*8 <= size ||*/ 8 <= Capacity) //Have no idea how to deal with this
             {
                 var readAddr = M.Read<long>(address);
-                return M.ReadStringU(readAddr);
+                return M.ReadStringU(readAddr, length);
             }
 
-            return M.ReadStringU(address);
+            return M.ReadStringU(address, length);
         }
     }
 }
