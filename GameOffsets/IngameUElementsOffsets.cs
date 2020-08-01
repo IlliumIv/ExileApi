@@ -10,6 +10,7 @@ namespace GameOffsets
         [FieldOffset(0x370)] public long Mouse;
         [FieldOffset(0x378)] public long SkillBar;
         [FieldOffset(0x380)] public long HiddenSkillBar;
+        [FieldOffset(0x3D8)] public long BanditDialog;
         [FieldOffset(0x480)] public long QuestTracker;
         [FieldOffset(0x4E8)] public long OpenLeftPanel;
         [FieldOffset(0x4F0)] public long OpenRightPanel;
@@ -20,8 +21,11 @@ namespace GameOffsets
         [FieldOffset(0x588)] public long WorldMap;
         [FieldOffset(0x5A8)] public long Map;
         [FieldOffset(0x5B0)] public long itemsOnGroundLabelRoot;
+        [FieldOffset(0x630)] public long NpcDialog;
+        [FieldOffset(0x640)] public long QuestRewardWindow;
         [FieldOffset(0x648)] public long PurchaseWindow;
         [FieldOffset(0x650)] public long SellWindow;
+        [FieldOffset(0x658)] public long TradeWindow;
         [FieldOffset(0x690)] public long MapDeviceWindow;
         [FieldOffset(0x6E8)] public long IncursionWindow;
         [FieldOffset(0x708)] public long DelveWindow;

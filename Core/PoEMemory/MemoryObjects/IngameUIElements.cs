@@ -29,8 +29,11 @@ namespace ExileCore.PoEMemory.MemoryObjects
         }
 
         public IngameUElementsOffsets IngameUIElementsStruct => _cachedValue.Value;
-        public Element GameUI => _gameUI ?? (_gameUI = GetObject<Element>(IngameUIElementsStruct.GameUI));
+        public GameUi GameUI => GetObject<GameUi>(IngameUIElementsStruct.GameUI);
         public SellWindow SellWindow => GetObject<SellWindow>(IngameUIElementsStruct.SellWindow);
+        public TradeWindow TradeWindow => GetObject<TradeWindow>(IngameUIElementsStruct.TradeWindow);
+        public NpcDialog NpcDialog => GetObject<NpcDialog>(IngameUIElementsStruct.NpcDialog);
+        public BanditDialog BanditDialog => GetObject<BanditDialog>(IngameUIElementsStruct.BanditDialog);
         public Element PurchaseWindow => _purchaseWindow ?? (_purchaseWindow = GetObject<Element>(IngameUIElementsStruct.PurchaseWindow));
         public SubterraneanChart DelveWindow =>
             _DelveWindow ?? (_DelveWindow = GetObject<SubterraneanChart>(IngameUIElementsStruct.DelveWindow));
@@ -39,6 +42,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public PoeChatElement ChatBox => GetObject<PoeChatElement>(M.Read<long>(Address + 0x3F8, 0x2C8, 0xE20, 0x350));
         public IList<string> ChatMessages => ChatBox.Children.Select(x => x.Text).ToList();
         public Element QuestTracker => GetObject<Element>(IngameUIElementsStruct.QuestTracker);
+        public QuestRewardWindow QuestRewardWindow => GetObject<QuestRewardWindow>(IngameUIElementsStruct.QuestRewardWindow);
         public Element OpenLeftPanel => GetObject<Element>(IngameUIElementsStruct.OpenLeftPanel);
         public Element OpenRightPanel => GetObject<Element>(IngameUIElementsStruct.OpenRightPanel);
         public StashElement StashElement => GetObject<StashElement>(IngameUIElementsStruct.StashElement);
@@ -51,7 +55,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public ItemsOnGroundLabelElement ItemsOnGroundLabelElement =>
             GetObject<ItemsOnGroundLabelElement>(IngameUIElementsStruct.itemsOnGroundLabelRoot);
         public IList<LabelOnGround> ItemsOnGroundLabels => ItemsOnGroundLabelElement.LabelsOnGround;
-        public Element GemLvlUpPanel => GetObject<Element>(IngameUIElementsStruct.GemLvlUpPanel);
+        public GemLvlUpPanel GemLvlUpPanel => GetObject<GemLvlUpPanel>(IngameUIElementsStruct.GemLvlUpPanel);
         public Element InvitesPanel => GetObject<Element>(IngameUIElementsStruct.InvitesPanel);
         public ItemOnGroundTooltip ItemOnGroundTooltip => GetObject<ItemOnGroundTooltip>(IngameUIElementsStruct.ItemOnGroundTooltip);
         public MapStashTabElement MapStashTab => ReadObject<MapStashTabElement>(IngameUIElementsStruct.MapTabWindowStartPtr + 0xAA0);

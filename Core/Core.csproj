@@ -224,6 +224,7 @@
     <Compile Include="PoEMemory\Components\WorldItem.cs" />
     <Compile Include="PoEMemory\Element.cs" />
     <Compile Include="PoEMemory\Elements\AtlasPanel.cs" />
+    <Compile Include="PoEMemory\Elements\BanditDialog.cs" />
     <Compile Include="PoEMemory\Elements\InventoryElements\DeliriumInventoryItem.cs" />
     <Compile Include="PoEMemory\Elements\DelveElement.cs" />
     <Compile Include="PoEMemory\Elements\EntityLabel.cs" />
@@ -245,6 +246,7 @@
     <Compile Include="PoEMemory\Elements\ItemsOnGroundLabelElement.cs" />
     <Compile Include="PoEMemory\Elements\Map.cs" />
     <Compile Include="PoEMemory\Elements\MapStashTabElementQ.cs" />
+    <Compile Include="PoEMemory\Elements\NpcDialog.cs" />
     <Compile Include="PoEMemory\Elements\PoeChatElement.cs" />
     <Compile Include="PoEMemory\Elements\SkillBarElement.cs" />
     <Compile Include="PoEMemory\Elements\SkillElement.cs" />
@@ -305,6 +307,8 @@
     <Compile Include="PoEMemory\MemoryObjects\DiagnosticElement.cs" />
     <Compile Include="PoEMemory\MemoryObjects\EntityList.cs" />
     <Compile Include="PoEMemory\MemoryObjects\GameStateContoller.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\GameUi.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\GemLvlUpPanel.cs" />
     <Compile Include="PoEMemory\MemoryObjects\GrantedEffectsPerLevel.cs" />
     <Compile Include="PoEMemory\MemoryObjects\HideoutWrapper.cs" />
     <Compile Include="PoEMemory\MemoryObjects\IngameData.cs" />
@@ -322,12 +326,14 @@
     <Compile Include="PoEMemory\MemoryObjects\Entity.cs" />
     <Compile Include="PoEMemory\MemoryObjects\ProphecyDat.cs" />
     <Compile Include="PoEMemory\MemoryObjects\Quest.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\QuestRewardWindow.cs" />
     <Compile Include="PoEMemory\MemoryObjects\QuestState.cs" />
     <Compile Include="PoEMemory\MemoryObjects\SellWindow.cs" />
     <Compile Include="PoEMemory\MemoryObjects\ServerData.cs" />
     <Compile Include="PoEMemory\MemoryObjects\ServerInventory.cs" />
     <Compile Include="PoEMemory\MemoryObjects\ServerStashTab.cs" />
     <Compile Include="PoEMemory\MemoryObjects\SkillGemWrapper.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\TradeWindow.cs" />
     <Compile Include="PoEMemory\MemoryObjects\WorldArea.cs" />
     <Compile Include="PoEMemory\Models\BaseItemType.cs" />
     <Compile Include="PoEMemory\Models\ItemStats.cs" />
