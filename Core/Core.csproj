@@ -225,6 +225,7 @@
     <Compile Include="PoEMemory\Element.cs" />
     <Compile Include="PoEMemory\Elements\AtlasPanel.cs" />
     <Compile Include="PoEMemory\Elements\BanditDialog.cs" />
+    <Compile Include="PoEMemory\Elements\InstanceManagerPanel.cs" />
     <Compile Include="PoEMemory\Elements\InventoryElements\DeliriumInventoryItem.cs" />
     <Compile Include="PoEMemory\Elements\DelveElement.cs" />
     <Compile Include="PoEMemory\Elements\EntityLabel.cs" />

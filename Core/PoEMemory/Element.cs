@@ -134,7 +134,7 @@ namespace ExileCore.PoEMemory
             return results;
         }
 
-        private IList<Element> GetParentChain()
+        public IList<Element> GetParentChain()
         {
             var list = new List<Element>();
 
@@ -190,6 +190,54 @@ namespace ExileCore.PoEMemory
             var num = (vPos.X + X * Scale / rootScale) * xScale;
             var num2 = (vPos.Y + Y * Scale / rootScale) * yScale;
             return new RectangleF(num, num2, xScale * Width * Scale / rootScale, yScale * Height * Scale / rootScale);
+        }
+
+        public virtual RectangleF GetClientRectWithTrans(Vector2 posTrans)
+        {
+            if (Address == 0) return RectangleF.Empty;
+            var vPos = GetParentPos() + posTrans;
+            float width = TheGame.IngameState.Camera.Width;
+            float height = TheGame.IngameState.Camera.Height;
+            var ratioFixMult = width / height / 1.6f;
+            var xScale = width / 2560f / ratioFixMult;
+            var yScale = height / 1600f;
+
+            var rootScale = TheGame.IngameState.UIRoot.Scale;
+            var num = (vPos.X + X * Scale / rootScale) * xScale;
+            var num2 = (vPos.Y + Y * Scale / rootScale) * yScale;
+            return new RectangleF(num, num2, xScale * Width * Scale / rootScale, yScale * Height * Scale / rootScale);
+        }
+
+        public virtual RectangleF GetRect(Vector2 rootPos)
+        {
+            if (Address == 0) return RectangleF.Empty;
+            var vPos = rootPos;
+            float width = TheGame.IngameState.Camera.Width;
+            float height = TheGame.IngameState.Camera.Height;
+            var ratioFixMult = width / height / 1.6f;
+            var xScale = width / 2560f / ratioFixMult;
+            var yScale = height / 1600f;
+
+            var rootScale = TheGame.IngameState.UIRoot.Scale;
+            var num = (vPos.X + X * Scale / rootScale) * xScale;
+            var num2 = (vPos.Y + Y * Scale / rootScale) * yScale;
+            return new RectangleF(num, num2, xScale * Width * Scale / rootScale, yScale * Height * Scale / rootScale);
+        }
+
+        public Element FindChildRecursive(string text)
+        {
+            if (Text == text)
+                return this;
+
+            foreach (var child in Children)
+            {
+                var elem = child.FindChildRecursive(text);
+
+                if (elem != null)
+                    return elem;
+            }
+
+            return null;
         }
 
         public Element GetChildFromIndices(params int[] indices)

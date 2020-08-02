@@ -6,14 +6,16 @@ namespace GameOffsets
 	public struct IngameUElementsOffsets
 	{
 		[FieldOffset(0x210)] public long GetQuests;
-		[FieldOffset(0x250)] public long GameUI;
+        [FieldOffset(0x238)] public long GameUI;
         [FieldOffset(0x370)] public long Mouse;
         [FieldOffset(0x378)] public long SkillBar;
         [FieldOffset(0x380)] public long HiddenSkillBar;
         [FieldOffset(0x3D8)] public long BanditDialog;
         [FieldOffset(0x480)] public long QuestTracker;
-        [FieldOffset(0x4E8)] public long OpenLeftPanel;
-        [FieldOffset(0x4F0)] public long OpenRightPanel;
+        //[FieldOffset(0x4E8)] public long OpenLeftPanel;
+        //[FieldOffset(0x4F0)] public long OpenRightPanel;
+        [FieldOffset(0x4E0)] public long OpenLeftPanel;
+        [FieldOffset(0x4E8)] public long OpenRightPanel;
         [FieldOffset(0x520)] public long InventoryPanel;
         [FieldOffset(0x528)] public long StashElement;
         [FieldOffset(0x550)] public long TreePanel;
