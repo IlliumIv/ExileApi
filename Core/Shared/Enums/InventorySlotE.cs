@@ -41,6 +41,8 @@ namespace ExileCore.Shared.Enums
         IncursionSacrifice,
         BetrayalUnveiling,
         ItemSynthesisInput,
-        ItemSynthesisOutput
+        ItemSynthesisOutput,
+        
+        Invalid
     }
 }

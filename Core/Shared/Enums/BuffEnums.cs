@@ -2,6 +2,7 @@ namespace ExileCore.Shared.Enums
 {
     public enum BuffEnums
     {
+        none = -1,
         ignited,
         chilled,
         frozen,

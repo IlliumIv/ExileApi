@@ -63,7 +63,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
                     {
                         var entityAddress = node.Entity;
 
-                        if (entityAddress > 0x100000000 && entityAddress < 0x7F0000000000)
+                        if (entityAddress > 0x1000 && entityAddress < 0x7F0000000000)
                             hashAddresses.Add(entityAddress);
 
                         node = M.Read<EntityListOffsets>(nextAddr);

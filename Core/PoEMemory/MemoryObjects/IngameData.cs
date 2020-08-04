@@ -41,6 +41,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public EntityList EntityList => _EntityList ?? (_EntityList = GetObject<EntityList>(DataStruct.EntityList));
         private long LabDataPtr => _cacheStruct.Value.LabDataPtr;
         public LabyrinthData LabyrinthData => LabDataPtr == 0 ? null : GetObject<LabyrinthData>(LabDataPtr);
+        public TerrainData Terrain => _cacheStruct.Value.Terrain;
 
         public Dictionary<GameStat, int> MapStats
         {
