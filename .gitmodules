@@ -22,10 +22,6 @@
 	path = Plugins/Source/DPSMeter
 	url = https://github.com/TehCheat/DPSMeter
 	branch = master
-[submodule "Plugins/Source/ItemAlert"]
-	path = Plugins/Source/ItemAlert
-	url = https://github.com/TehCheat/ItemAlert
-	branch = master
 [submodule "Plugins/Source/KillCounter"]
 	path = Plugins/Source/KillCounter
 	url = https://github.com/TehCheat/KillCounter
@@ -121,3 +117,6 @@
 [submodule "Plugins/Source/MapNotify"]
 	path = Plugins/Source/MapNotify
 	url = https://github.com/Lachrymatory/MapNotify.git
+[submodule "Plugins/Source/ItemAlert"]
+	path = Plugins/Source/ItemAlert
+	url = https://github.com/IlliumIv/ItemAlert
