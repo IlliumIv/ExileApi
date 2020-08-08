@@ -254,8 +254,10 @@ namespace ExileCore.PoEMemory.MemoryObjects
                     break;
                 case 0x01:
                     // Normal Stash and Quad Stash is same.
-                    if (TotalBoxesInInventoryRow == 24) _cacheInventoryType = InventoryType.QuadStash;
-                    _cacheInventoryType = InventoryType.NormalStash;
+                    if (TotalBoxesInInventoryRow == 24)
+                        _cacheInventoryType = InventoryType.QuadStash;
+                    else
+                        _cacheInventoryType = InventoryType.NormalStash;
                     break;
                 case 0x23:
                     _cacheInventoryType = InventoryType.DelveStash;

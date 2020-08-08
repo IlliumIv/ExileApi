@@ -70,12 +70,18 @@ namespace ExileCore
         {
             try
             {
-                form.Load += (sender, args) =>
+                if (form != null)
                 {
-                    var f = (RenderForm) sender;
-                    WinApi.EnableTransparent(f.Handle);
-                    WinApi.SetTransparent(f.Handle);
-                };
+                    form.Load += (sender, args) =>
+                    {
+                        var f = (RenderForm)sender;
+                        WinApi.EnableTransparent(f.Handle);
+                        WinApi.SetTransparent(f.Handle);
+                    };
+                    
+                    _form = form;
+                    FormHandle = _form.Handle;
+                }
 
                 _coreDebugInformation = new DebugInformation("Core");
                 _menuDebugInformation = new DebugInformation("Menu+Debug");
@@ -86,30 +92,33 @@ namespace ExileCore
                 _fpsCounterDebugInformation = new DebugInformation("Fps counter", false);
                 _deltaTimeDebugInformation = new DebugInformation("Delta Time", false);
                 _totalDebugInformation = new DebugInformation("Total", "Total waste time");
-                _form = form;
-                FormHandle = _form.Handle;
                 _settings = new SettingsContainer();
                 _coreSettings = _settings.CoreSettings;
                 _coreSettings.Threads = new RangeNode<int>(_coreSettings.Threads.Value, 0, Environment.ProcessorCount);
                 CoroutineRunner = new Runner("Main Coroutine");
                 CoroutineRunnerParallel = new Runner("Parallel Coroutine");
 
-                using (new PerformanceTimer("DX11 Load"))
+                if (form != null)
                 {
-                    _dx11 = new DX11(form, _coreSettings);
-                }
+                    using (new PerformanceTimer("DX11 Load"))
+                    {
+                        _dx11 = new DX11(form, _coreSettings);
+                    }
 
-                if (Environment.OSVersion.Version.Major == 6 && Environment.OSVersion.Version.Minor == 1)
-                {
-                    Logger.Information($"SoundController init skipped because win7 issue.");
-                }
-                else
-                {
-                    _soundController = new SoundController("Sounds");
+                    if (Environment.OSVersion.Version.Major == 6 && Environment.OSVersion.Version.Minor == 1)
+                    {
+                        Logger.Information($"SoundController init skipped because win7 issue.");
+                    }
+                    else
+                    {
+                        _soundController = new SoundController("Sounds");
+                    }
                 }
                 _coreSettings.Volume.OnValueChanged += (sender, i) => { _soundController.SetVolume(i / 100f); };
                 _coreSettings.VSync.OnValueChanged += (obj, b) => { _dx11.VSync = _coreSettings.VSync.Value; };
-                Graphics = new Graphics(_dx11, _coreSettings);
+                
+                if (form != null)
+                    Graphics = new Graphics(_dx11, _coreSettings);
 
                 MainRunner = CoroutineRunner;
                 ParallelRunner = CoroutineRunnerParallel;
@@ -117,8 +126,12 @@ namespace ExileCore
                 // Task.Run(ParallelCoroutineRunner);
                 var th = new Thread(ParallelCoroutineManualThread) {Name = "Parallel Coroutine", IsBackground = true};
                 th.Start();
-                _mainMenu = new MenuWindow(this, _settings, _dx11.ImGuiRender.fonts);
-                _debugWindow = new DebugWindow(Graphics, _coreSettings);
+
+                if (form != null)
+                {
+                    _mainMenu = new MenuWindow(this, _settings, _dx11.ImGuiRender.fonts);
+                    _debugWindow = new DebugWindow(Graphics, _coreSettings);
+                }
 
                 MultiThreadManager = new MultiThreadManager(_coreSettings.Threads);
                 CoroutineRunner.MultiThreadManager = MultiThreadManager;
@@ -153,18 +166,22 @@ namespace ExileCore
 
                 if (GameController == null && _memory != null) Inject();
 
-                var coroutine = new Coroutine(MainControl(), null, "Render control")
-                    {Priority = CoroutinePriority.Critical};
+                if (form != null)
+                {
+                    var coroutine = new Coroutine(MainControl(), null, "Render control")
+                    { Priority = CoroutinePriority.Critical };
 
-                CoroutineRunnerParallel.Run(coroutine);
+                    CoroutineRunnerParallel.Run(coroutine);
+                }
                 NextCoroutineTime = Time.TotalMilliseconds;
                 NextRender = Time.TotalMilliseconds;
-                if (pluginManager.Plugins.Count == 0)
+                if (pluginManager?.Plugins.Count == 0)
                 {
                     _coreSettings.Enable.Value = true;
                 }
 
-                Graphics.InitImage("missing_texture.png");
+                if (form != null)
+                    Graphics.InitImage("missing_texture.png");
             }
             catch (Exception e)
             {
@@ -278,13 +295,18 @@ namespace ExileCore
             {
                 if (_memory != null)
                 {
-                    _dx11.ImGuiRender.LostFocus += LostFocus;
+                    if (_dx11 != null)
+                        _dx11.ImGuiRender.LostFocus += LostFocus;
                     GameController = new GameController(_memory, _soundController, _settings, MultiThreadManager);
-                    lastClientBound = _form.Bounds;
 
-                    using (new PerformanceTimer("Plugin loader"))
+                    if (_form != null)
                     {
-                        pluginManager = new PluginManager(GameController, Graphics, MultiThreadManager);
+                        lastClientBound = _form.Bounds;
+
+                        using (new PerformanceTimer("Plugin loader"))
+                        {
+                            pluginManager = new PluginManager(GameController, Graphics, MultiThreadManager);
+                        }
                     }
                 }
             }
@@ -317,7 +339,7 @@ namespace ExileCore
                 {
                     try
                     {
-                        _debugWindow.Render();
+                        _debugWindow?.Render();
                     }
                     catch (Exception e)
                     {
@@ -326,7 +348,7 @@ namespace ExileCore
 
                     try
                     {
-                        _mainMenu.Render(GameController);
+                        _mainMenu?.Render(GameController);
                     }
                     catch (Exception e)
                     {
@@ -337,11 +359,14 @@ namespace ExileCore
                     _menuDebugInformation.Tick = _tickEnd - _tickStartCore;
                 }
 
-                if (GameController == null || pluginManager == null || !pluginManager.AllPluginsLoaded)
+                if (GameController == null/* || pluginManager == null || !pluginManager.AllPluginsLoaded*/)
                 {
                     _coreDebugInformation.Tick = (float) (_sw.Elapsed.TotalMilliseconds - _tickStart);
                     return;
                 }
+
+                if (_form == null)
+                    TickCoroutines();
 
                 _timeSec += GameController.DeltaTime;
 
@@ -551,16 +576,13 @@ namespace ExileCore
             }
         }
 
-        public void Render()
+        public void TickCoroutines()
         {
-            var startTime = Time.TotalMilliseconds;
-            _tickStart = _sw.Elapsed.TotalMilliseconds;
-
-            ticks++;
-
             if (NextCoroutineTime <= Time.TotalMilliseconds)
             {
                 NextCoroutineTime += _targetParallelFpsTime;
+
+                _tickStart = _sw.Elapsed.TotalMilliseconds;
 
                 if (CoroutineRunner.IsRunning)
                 {
@@ -571,9 +593,17 @@ namespace ExileCore
                 }
 
                 _tickEnd = _sw.Elapsed.TotalMilliseconds;
-                _coroutineTickDebugInformation.Tick = (float) (_tickEnd - _tickStart);
+                _coroutineTickDebugInformation.Tick = (float)(_tickEnd - _tickStart);
             }
+        }
 
+        public void Render()
+        {
+            var startTime = Time.TotalMilliseconds;
+            
+            ticks++;
+
+            TickCoroutines();
 
             if (NextRender <= Time.TotalMilliseconds)
             {
@@ -611,5 +641,31 @@ namespace ExileCore
             ImGui.CaptureMouseFromApp();
             ImGui.CaptureKeyboardFromApp();
         }
+
+        public static Core CreateInstance()
+        {
+            if (Current != null)
+                return Current;
+
+            while (true)
+            {
+                var clients = Process.GetProcessesByName(Offsets.Regular.ExeName).Select(x => (x, Offsets.Regular)).ToList();
+
+                if (clients.Any())
+                    break;
+                else
+                    Trace.WriteLine("Could not find any PoE process.");
+                Thread.Sleep(1000);
+            }
+
+            Trace.WriteLine("PoE process found.");
+
+            Current = new Core(null);
+            Current.TickCoroutines();
+
+            return Current;
+        }
+
+        public static Core Current;
     }
 }

@@ -40,7 +40,7 @@ namespace ExileCore.Shared.Helpers
 
                 if (Log)
                 {
-                    Logger.Information(
+                    Logger?.Information(
                         $"PerfTimer =-> {DebugText} ({elapsed.TotalMilliseconds} ms) Thread #[{Thread.CurrentThread.ManagedThreadId}]");
                 }
 

@@ -36,6 +36,8 @@ namespace ExileCore.Shared.Enums
         Terrain,
         DelveCraftingBench,
         GuildStash,
-        MiscellaneousObjects
+        MiscellaneousObjects,
+        Door,
+        DoorSwitch
     }
 }

@@ -26,5 +26,23 @@ namespace ExileCore.PoEMemory.MemoryObjects
 
             return M.ReadStringU(address, length);
         }
+
+        public static string ReadStringLong(long address, IMemory M)
+        {
+            var size = (int)M.Read<uint>(address + 0x10) * 2;
+            var capacity = M.Read<uint>(address + 0x18);
+
+            //var size = Size;
+            //if (size == 0)
+            //    return string.Empty;
+            if ( /*8 <= size ||*/ 8 <= capacity) //Have no idea how to deal with this
+            {
+                var readAddr = M.Read<long>(address);
+                return M.ReadStringU(readAddr, size);
+            }
+
+            return M.ReadStringU(address, size);
+        }
+
     }
 }
