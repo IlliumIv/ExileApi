@@ -1,3 +1,9 @@
+# You probably not should use this repo cause it is not have changes with TehCheat/ExileApi.
+This repo only exists because it allows me to be more comfortable with plugins - update them, add new ones, and make the changes that I want.
+However, if you really want a compiled and working version of ExileApi with added and modified plugins - you can [download it here](https://github.com/IlliumIv/ExileApi/releases/latest).
+
+
+
 # ExileApi private fork of PoeHud
 
 Dirty copy of my private fork.
