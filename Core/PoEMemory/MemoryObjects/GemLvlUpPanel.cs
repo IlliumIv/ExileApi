@@ -10,6 +10,8 @@ namespace ExileCore.PoEMemory.MemoryObjects
     {
         public IList<Element> GemsToLvlUp => GetChildAtIndex(0)?.Children;
 
+        public List<(Entity, Element)> Gems => GemsToLvlUp.Select(gem => (gem.ReadObject<Entity>(gem.Address + 0x01b0), gem)).ToList();
+
         public Element LvlUpButtonForGem(Element gem)
         {
             return gem?.GetChildAtIndex(1);

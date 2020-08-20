@@ -19,7 +19,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
 
         private ServerInventoryOffsets Struct => cachedValue.Value;
         public InventoryTypeE InventType => (InventoryTypeE) M.Read<byte>(Address);
-        public InventorySlotE InventSlot => (InventorySlotE) M.Read<byte>(Address + 0x1);
+        public InventorySlotE InventSlot => (InventorySlotE) M.Read<byte>(Address + 0x4);
         public int Columns => M.Read<int>(Address + 0xc);
         public int Rows => M.Read<int>(Address + 0x10);
         public bool IsRequested => M.Read<byte>(Address + 0x4) == 1;

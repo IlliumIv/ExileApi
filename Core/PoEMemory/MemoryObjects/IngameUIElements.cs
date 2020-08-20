@@ -31,10 +31,11 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public IngameUElementsOffsets IngameUIElementsStruct => _cachedValue.Value;
         public GameUi GameUI => GetObject<GameUi>(IngameUIElementsStruct.GameUI);
         public SellWindow SellWindow => GetObject<SellWindow>(IngameUIElementsStruct.SellWindow);
+        public MapDeviceWindow MapDeviceWindow => GetObject<MapDeviceWindow>(IngameUIElementsStruct.MapDeviceWindow);
         public TradeWindow TradeWindow => GetObject<TradeWindow>(IngameUIElementsStruct.TradeWindow);
         public NpcDialog NpcDialog => GetObject<NpcDialog>(IngameUIElementsStruct.NpcDialog);
         public BanditDialog BanditDialog => GetObject<BanditDialog>(IngameUIElementsStruct.BanditDialog);
-        public Element PurchaseWindow => _purchaseWindow ?? (_purchaseWindow = GetObject<Element>(IngameUIElementsStruct.PurchaseWindow));
+        public Element PurchaseWindow => GetObject<Element>(IngameUIElementsStruct.PurchaseWindow);
         public SubterraneanChart DelveWindow =>
             _DelveWindow ?? (_DelveWindow = GetObject<SubterraneanChart>(IngameUIElementsStruct.DelveWindow));
         public SkillBarElement SkillBar => GetObject<SkillBarElement>(IngameUIElementsStruct.SkillBar);
@@ -77,6 +78,7 @@ namespace ExileCore.PoEMemory.MemoryObjects
         public WorldMapElement WorldMap => GetObject<WorldMapElement>(IngameUIElementsStruct.WorldMap);
         public MetamorphWindowElement MetamorphWindow => GetObject<MetamorphWindowElement>(IngameUIElementsStruct.MetamorphWindow);
         public SyndicatePanel SyndicatePanel => TheGame.IngameState.UIRoot.GetChildFromIndices(1, 67).AsObject<SyndicatePanel>();
+        public InstanceManagerPanel InstanceManagerPanel => TheGame.IngameState.UIRoot.GetChildFromIndices(1, 125).AsObject<InstanceManagerPanel>();
 
         public IList<Tuple<Quest, int>> GetUncompletedQuests
         {

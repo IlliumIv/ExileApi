@@ -208,6 +208,7 @@
     <Compile Include="PoEMemory\Components\Render.cs" />
     <Compile Include="PoEMemory\Components\RenderItem.cs" />
     <Compile Include="PoEMemory\Components\Sector.cs" />
+    <Compile Include="PoEMemory\Components\Shield.cs" />
     <Compile Include="PoEMemory\Components\Shrine.cs" />
     <Compile Include="PoEMemory\Components\SkillGem.cs" />
     <Compile Include="PoEMemory\Components\Sockets.cs" />
@@ -319,6 +320,7 @@
     <Compile Include="PoEMemory\MemoryObjects\InventoryList.cs" />
     <Compile Include="PoEMemory\MemoryObjects\ItemMod.cs" />
     <Compile Include="PoEMemory\MemoryObjects\LabyrinthData.cs" />
+    <Compile Include="PoEMemory\MemoryObjects\MapDeviceWindow.cs" />
     <Compile Include="PoEMemory\MemoryObjects\MapStashTabElement.cs" />
     <Compile Include="PoEMemory\MemoryObjects\Metamorph\MetamorphWindowElement.cs" />
     <Compile Include="PoEMemory\MemoryObjects\MonsterVariety.cs" />

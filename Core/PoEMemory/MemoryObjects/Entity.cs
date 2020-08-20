@@ -276,6 +276,16 @@ namespace ExileCore.PoEMemory.MemoryObjects
             }
         }
 
+        public bool IsTransitioned => IsTransitionedHelper();
+        private bool IsTransitionedHelper()
+        {
+            var transitionable = GetComponent<Transitionable>();
+            var flag = transitionable?.Flag1; //1, 2
+            if (!flag.HasValue) return false;
+            return flag.Value == 2;
+        }
+
+
         public List<Buff> Buffs => buffCache.Value;
         private string CachePath { get; set; }
 
@@ -753,9 +763,17 @@ namespace ExileCore.PoEMemory.MemoryObjects
 
             if (Path.StartsWith("Metadata/MiscellaneousObjects/Lights", StringComparison.Ordinal)) return EntityType.Light;
 
+            if (Path.StartsWith("Metadata/Terrain/Labyrinth/Objects/Puzzle_Parts/Switch_Once", StringComparison.Ordinal)) return EntityType.DoorSwitch;
+            //if (Path.StartsWith("Metadata/Terrain/Labyrinth/Objects/LabyrinthIntroDoor", StringComparison.Ordinal)) return EntityType.Door;
+
             if (Path.StartsWith("Metadata/Terrain", StringComparison.Ordinal)) return EntityType.Terrain;
 
             if (Path.StartsWith("Metadata/Pet", StringComparison.Ordinal)) return EntityType.Pet;
+
+            if (Path.StartsWith("Metadata/MiscellaneousObjects/Door", StringComparison.Ordinal)) return EntityType.Door;
+
+            if (Path.StartsWith("Metadata/MiscellaneousObjects", StringComparison.Ordinal)) return EntityType.MiscellaneousObjects;
+
 
             return EntityType.None;
         }
