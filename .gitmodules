@@ -122,3 +122,12 @@
 [submodule "Plugins/Source/KillCounter"]
 	path = Plugins/Source/KillCounter
 	url = https://github.com/IlliumIv/KillCounter
+[submodule "Plugins/Source/VmsHelper"]
+	path = Plugins/Source/VmsHelper
+	url = https://github.com/vadash/VmsHelper.git
+[submodule "Plugins/Source/ProximityAlert"]
+	path = Plugins/Source/ProximityAlert
+	url = https://github.com/Lachrymatory/ProximityAlert.git
+[submodule "Plugins/Source/Aim-Bot"]
+	path = Plugins/Source/Aim-Bot
+	url = https://github.com/IlliumIv/Aim-Bot
