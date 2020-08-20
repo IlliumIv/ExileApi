@@ -116,9 +116,6 @@
 [submodule "Plugins/Source/ItemAlert"]
 	path = Plugins/Source/ItemAlert
 	url = https://github.com/IlliumIv/ItemAlert
-[submodule "KillCounter"]
-	path = KillCounter
-	url = https://github.com/IlliumIv/KillCounter
 [submodule "Plugins/Source/KillCounter"]
 	path = Plugins/Source/KillCounter
 	url = https://github.com/IlliumIv/KillCounter
