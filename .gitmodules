@@ -22,10 +22,6 @@
 	path = Plugins/Source/DPSMeter
 	url = https://github.com/TehCheat/DPSMeter
 	branch = master
-[submodule "Plugins/Source/KillCounter"]
-	path = Plugins/Source/KillCounter
-	url = https://github.com/TehCheat/KillCounter
-	branch = master
 [submodule "Plugins/Source/PassiveSkillTreePlanter"]
 	path = Plugins/Source/PassiveSkillTreePlanter
 	url = https://github.com/TehCheat/PassiveSkillTreePlanter
@@ -120,3 +116,9 @@
 [submodule "Plugins/Source/ItemAlert"]
 	path = Plugins/Source/ItemAlert
 	url = https://github.com/IlliumIv/ItemAlert
+[submodule "KillCounter"]
+	path = KillCounter
+	url = https://github.com/IlliumIv/KillCounter
+[submodule "Plugins/Source/KillCounter"]
+	path = Plugins/Source/KillCounter
+	url = https://github.com/IlliumIv/KillCounter
