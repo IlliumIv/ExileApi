@@ -1,0 +1,5 @@
+Logs
+config\global
+*.pdb
+*\*.pdb
+*\*\*\*.pdb

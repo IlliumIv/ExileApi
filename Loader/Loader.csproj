@@ -134,6 +134,17 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.3.2.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.3.2.1\build\Microsoft.Net.Compilers.props'))" />
   </Target>
+  <ItemGroup>
+    <None Include="$(MSBuildProjectDirectory)\Properties\Build\_buildforcer">
+      <Visible>true</Visible>
+    </None>
+  </ItemGroup>
+  <Target Name="ForceNextBuild" AfterTargets="PrepareForRun" Condition=" '$(BuildingInsideVisualStudio)' == 'true' ">
+    <Touch Files="$(MSBuildProjectDirectory)\Properties\Build\_buildforcer" AlwaysCreate="true" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>start "" ..\ExileApi\create_archive.bat</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
