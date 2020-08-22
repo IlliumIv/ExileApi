@@ -1,5 +1,8 @@
 Logs
 config\global
+Plugins\Compiled\AdvancedUberLabLayout\CachedImages
+Plugins\Compiled\Ninja Pricer\NinjaData
+Plugins\Compiled\FullRareSetManager\StashData.json
 *.pdb
 *\*.pdb
 *\*\*\*.pdb

@@ -1,7 +1,3 @@
-[submodule "Plugins/Source/IconsBuilder"]
-	path = Plugins/Source/IconsBuilder
-	url = https://github.com/TehCheat/IconsBuilder
-	branch = master
 [submodule "Plugins/Source/MineDetonator"]
 	path = Plugins/Source/MineDetonator
 	url = https://github.com/TehCheat/MineDetonator
@@ -33,10 +29,6 @@
 [submodule "Plugins/Source/AutoQuit"]
 	path = Plugins/Source/AutoQuit
 	url = https://github.com/TehCheat/AutoQuit
-	branch = master
-[submodule "Plugins/Source/DelveWalls"]
-	path = Plugins/Source/DelveWalls
-	url = https://github.com/TehCheat/DelveWalls
 	branch = master
 [submodule "Plugins/Source/AdvancedTooltip"]
 	path = Plugins/Source/AdvancedTooltip
@@ -107,9 +99,6 @@
 [submodule "Plugins/Source/MapsExchange"]
 	path = Plugins/Source/MapsExchange
 	url = https://github.com/IlliumIv/MapsExchange
-[submodule "Plugins/Source/HarvestHelpers"]
-	path = Plugins/Source/HarvestHelpers
-	url = https://github.com/Stridemann/HarvestHelpers.git
 [submodule "Plugins/Source/MapNotify"]
 	path = Plugins/Source/MapNotify
 	url = https://github.com/Lachrymatory/MapNotify.git
@@ -119,12 +108,21 @@
 [submodule "Plugins/Source/KillCounter"]
 	path = Plugins/Source/KillCounter
 	url = https://github.com/IlliumIv/KillCounter
-[submodule "Plugins/Source/VmsHelper"]
-	path = Plugins/Source/VmsHelper
-	url = https://github.com/vadash/VmsHelper.git
 [submodule "Plugins/Source/ProximityAlert"]
 	path = Plugins/Source/ProximityAlert
 	url = https://github.com/Lachrymatory/ProximityAlert.git
 [submodule "Plugins/Source/Aim-Bot"]
 	path = Plugins/Source/Aim-Bot
 	url = https://github.com/IlliumIv/Aim-Bot
+[submodule "Plugins/Source/VmsHelper"]
+	path = Plugins/Source/VmsHelper
+	url = https://github.com/IlliumIv/VmsHelper
+[submodule "Plugins/Source/HarvestHelpers"]
+	path = Plugins/Source/HarvestHelpers
+	url = https://github.com/IlliumIv/HarvestHelpers
+[submodule "Plugins/Source/DelveWalls"]
+	path = Plugins/Source/DelveWalls
+	url = https://github.com/IlliumIv/DelveWalls
+[submodule "Plugins/Source/IconsBuilder"]
+	path = Plugins/Source/IconsBuilder
+	url = https://github.com/IlliumIv/IconsBuilder
