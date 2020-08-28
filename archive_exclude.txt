@@ -1,3 +1,4 @@
+.git
 Logs
 config\global
 Plugins\Compiled\AdvancedUberLabLayout\CachedImages
