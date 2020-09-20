@@ -1,5 +1,5 @@
-# Required actual GameOffsets.dll and ExileCore.dll by TehCheat. 
-======
+Heist update:
+# Required actual GameOffsets.dll and ExileCore.dll by TehCheat.
 
 # You probably not should use this repo cause it is not have changes with TehCheat/ExileApi.
 This repo only exists because it allows me to be more comfortable with plugins - update them, add new ones, and make the changes that I want.
