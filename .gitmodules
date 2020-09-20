@@ -114,12 +114,12 @@
 [submodule "Plugins/Source/MineDetonator"]
 	path = Plugins/Source/MineDetonator
 	url = https://github.com/IlliumIv/MineDetonator/
-[submodule "Plugins/Source/PassiveSkillTreePlanter"]
-	path = Plugins/Source/PassiveSkillTreePlanter
-	url = https://github.com/IlliumIv/PassiveSkillTreePlanter
 [submodule "Plugins/Source/SkillDPS"]
 	path = Plugins/Source/SkillDPS
 	url = https://github.com/IlliumIv/SkillDPS
 [submodule "Plugins/Source/XpBar"]
 	path = Plugins/Source/XpBar
 	url = https://github.com/IlliumIv/XpBar
+[submodule "Plugins/Source/PassiveSkillTreePlanter"]
+	path = Plugins/Source/PassiveSkillTreePlanter
+	url = https://github.com/IlliumIv/PassiveSkillTreePlanter

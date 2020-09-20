@@ -216,3 +216,6 @@ project.lock.json
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
 
+# 3.12 Ignore
+ExileCore.dll
+GameOffsets.dll
