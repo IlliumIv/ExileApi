@@ -85,6 +85,11 @@ namespace ExileCore.PoEMemory.MemoryObjects
         {
         }
 
+        public void ReloadFiles()
+        {
+            Files = new FilesContainer(pM);
+        }
+
         private static bool GameStateActive(long stateAddress)
         {
             var gameStateController = Instance;

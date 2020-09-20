@@ -642,10 +642,13 @@ namespace ExileCore
             ImGui.CaptureKeyboardFromApp();
         }
 
-        public static Core CreateInstance()
+        public static Core CreateInstance(Int64 timeoutInMilliseconds = -1)
         {
             if (Current != null)
                 return Current;
+
+            Stopwatch timeoutTimer = new Stopwatch();
+            timeoutTimer.Start();
 
             while (true)
             {
@@ -655,6 +658,10 @@ namespace ExileCore
                     break;
                 else
                     Trace.WriteLine("Could not find any PoE process.");
+
+                if (timeoutInMilliseconds > 0 && timeoutTimer.ElapsedMilliseconds > timeoutInMilliseconds)
+                    return null;
+
                 Thread.Sleep(1000);
             }
 
@@ -664,6 +671,15 @@ namespace ExileCore
             Current.TickCoroutines();
 
             return Current;
+        }
+
+        public static void DestroyInstance()
+        {
+            if (Current == null)
+                return;
+
+            Current.Dispose();
+            Current = null;
         }
 
         public static Core Current;

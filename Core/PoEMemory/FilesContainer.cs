@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,7 +36,7 @@ namespace ExileCore.PoEMemory
         private PropheciesDat prophecies;
         private Quests quests;
         private QuestStates questStates;
-        
+
         //Will be loaded on first access:
         private WorldAreas worldAreas;
 
@@ -48,6 +49,8 @@ namespace ExileCore.PoEMemory
             using (new PerformanceTimer("Load files from memory"))
             {
                 AllFiles = FilesFromMemory.GetAllFiles();
+
+                Trace.WriteLine($"Loaded {AllFiles.Count} files from memory {AllFiles.Values.Count(x => x.Ptr > 0)}/{AllFiles.Count} has pointers.");
             }
 
             /*Task.Run(() =>

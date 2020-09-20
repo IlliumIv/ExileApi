@@ -38,6 +38,7 @@ namespace ExileCore
         private readonly TimeCache<Vector2> LeftCornerMap;
         private readonly TimeCache<Vector2> UnderCornerMap;
         private bool IsForeGroundLast;
+        private bool WasInGame;
         public PluginBridge PluginBridge;
 
         public GameController(Memory memory, SoundController soundController, SettingsContainer settings,
@@ -55,7 +56,7 @@ namespace ExileCore
                 Game = new TheGame(memory, Cache);
                 Area = new AreaController(Game);
                 Window = new GameWindow(memory.Process);
-                Files = Game.Files;
+                WasInGame = Game.InGame;
                 EntityListWrapper = new EntityListWrapper(this, _settings, multiThreadManager);
             }
             catch (Exception e)
@@ -122,7 +123,7 @@ namespace ExileCore
         public AreaController Area { get; }
         public GameWindow Window { get; }
         public IngameState IngameState => Game.IngameState;
-        public FilesContainer Files { get; }
+        public FilesContainer Files => Game.Files;
         public Entity Player => EntityListWrapper.Player;
         public bool IsForeGroundCache { get; set; }
         public bool InGame { get; private set; }
@@ -167,7 +168,18 @@ namespace ExileCore
 
                 InGame = Game.InGame; //Game.IngameState.InGame;
                 IsLoading = Game.IsLoading;
-                if (InGame) CachedValue.Latency = Game.IngameState.CurLatency;
+                if (InGame)
+                {
+                    if (!WasInGame)
+                    {
+                        // when core is created too early during game launch it will be missing some files pointers as they weren't loaded yet
+                        Game.ReloadFiles();
+                        WasInGame = true;
+                    }
+
+                    Game.IngameState.UpdateData();
+                    CachedValue.Latency = Game.IngameState.CurLatency;
+                }
             }
             catch (Exception e)
             {
