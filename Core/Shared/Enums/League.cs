@@ -10,6 +10,7 @@ namespace ExileCore.Shared.Enums
         Delve,
         Legion,
 		Delirium,
-        Harvest
+        Harvest,
+        Heist
     }
 }
