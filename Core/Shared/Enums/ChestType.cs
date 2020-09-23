@@ -12,6 +12,7 @@ namespace ExileCore.Shared.Enums
         Perandus,
         Labyrinth,
         Synthesis,
-        Legion
+        Legion,
+        Heist
     }
 }

@@ -123,3 +123,6 @@
 [submodule "Plugins/Source/PassiveSkillTreePlanter"]
 	path = Plugins/Source/PassiveSkillTreePlanter
 	url = https://github.com/IlliumIv/PassiveSkillTreePlanter
+[submodule "Plugins/Source/HeistIcons"]
+	path = Plugins/Source/HeistIcons
+	url = https://github.com/IlliumIv/HeistIcons

@@ -40,6 +40,11 @@ Known build errors:
 * Error with MsBuildMajorVersion: Update your VS2019 (maybe you have VS 2019 Preview or something)
 * MsBuild 15 < 16 error: expecting VS 2019 installed. On VS 2017 try downgrade Fody package to version 4.2.1.
 
+Texture atlas:
+* http://free-tex-packer.com/
+![Image](https://i.imgur.com/gZpEUPn.png)
+
+
 ## Troubleshooting
 
 * Download problems:
