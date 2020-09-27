@@ -126,3 +126,6 @@
 [submodule "Plugins/Source/HeistIcons"]
 	path = Plugins/Source/HeistIcons
 	url = https://github.com/IlliumIv/HeistIcons
+[submodule "Plugins/Source/InventoryItemsAnalyzer"]
+	path = Plugins/Source/InventoryItemsAnalyzer
+	url = https://github.com/IlliumIv/InventoryItemsAnalyzer
