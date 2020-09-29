@@ -129,3 +129,6 @@
 [submodule "Plugins/Source/InventoryItemsAnalyzer"]
 	path = Plugins/Source/InventoryItemsAnalyzer
 	url = https://github.com/IlliumIv/InventoryItemsAnalyzer
+[submodule "Plugins/Source/copilot"]
+	path = Plugins/Source/copilot
+	url = https://github.com/IlliumIv/copilot
