@@ -132,3 +132,6 @@
 [submodule "Plugins/Source/copilot"]
 	path = Plugins/Source/copilot
 	url = https://github.com/IlliumIv/copilot
+[submodule "Plugins/Source/FollowerV2"]
+	path = Plugins/Source/FollowerV2
+	url = https://github.com/IlliumIv/FollowerV2
