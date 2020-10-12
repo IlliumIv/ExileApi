@@ -135,3 +135,6 @@
 [submodule "Plugins/Source/FollowerV2"]
 	path = Plugins/Source/FollowerV2
 	url = https://github.com/IlliumIv/FollowerV2
+[submodule "Plugins/Source/Character-Data"]
+	path = Plugins/Source/Character-Data
+	url = https://github.com/IlliumIv/Character-Data
