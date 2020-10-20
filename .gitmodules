@@ -138,3 +138,6 @@
 [submodule "Plugins/Source/Character-Data"]
 	path = Plugins/Source/Character-Data
 	url = https://github.com/IlliumIv/Character-Data
+[submodule "Plugins/Source/GemUp"]
+	path = Plugins/Source/GemUp
+	url = https://github.com/IlliumIv/GemUp
