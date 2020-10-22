@@ -28,7 +28,7 @@ namespace GameOffsets
         public const int ATLAS_REGION_UPGRADES = 0x7BB2;
 		[FieldOffset(0)] public long MasterAreas;
 		//[FieldOffset(0x7068 - Skip)] public NativePtrArray PassiveSkillIds;
-        [FieldOffset(0x73B0 - Skip)] public int PlayerClass;
+        [FieldOffset(0x73B0 - Skip)] public byte PlayerClass;
         //[FieldOffset(0x710C - Skip)] public int CharacterLevel;
         //[FieldOffset(0x7110 - Skip)] public int PassiveRefundPointsLeft;
         //[FieldOffset(0x7114 - Skip)] public int QuestPassiveSkillPoints;
