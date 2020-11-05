@@ -142,3 +142,6 @@
 [submodule "Plugins/Source/IncursionHelpers"]
 	path = Plugins/Source/IncursionHelpers
 	url = https://github.com/IlliumIv/IncursionHelpers
+[submodule "Plugins/Source/ItemVisualizer"]
+	path = Plugins/Source/ItemVisualizer
+	url = https://github.com/IlliumIv/ItemVisualizer
