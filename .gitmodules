@@ -145,3 +145,6 @@
 [submodule "Plugins/Source/ItemVisualizer"]
 	path = Plugins/Source/ItemVisualizer
 	url = https://github.com/IlliumIv/ItemVisualizer
+[submodule "Plugins/Source/UnstackDecks"]
+	path = Plugins/Source/UnstackDecks
+	url = https://github.com/IlliumIv/UnstackDecks
