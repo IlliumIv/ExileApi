@@ -148,3 +148,6 @@
 [submodule "Plugins/Source/UnstackDecks"]
 	path = Plugins/Source/UnstackDecks
 	url = https://github.com/IlliumIv/UnstackDecks
+[submodule "Plugins/Source/Recipe"]
+	path = Plugins/Source/Recipe
+	url = https://github.com/IlliumIv/Recipe
