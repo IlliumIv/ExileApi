@@ -151,3 +151,6 @@
 [submodule "Plugins/Source/Recipe"]
 	path = Plugins/Source/Recipe
 	url = https://github.com/IlliumIv/Recipe
+[submodule "Plugins/Source/OnlyGoodMaps"]
+	path = Plugins/Source/OnlyGoodMaps
+	url = https://github.com/vadash/OnlyGoodMaps
