@@ -1,7 +1,9 @@
 .git
 Logs
+config\monster_mod_alerts_personal.txt
+config\monster_name_alerts_personal.txt
+config\preload_alerts_personal.txt
 config\global
-Plugins\Compiled\FollowMe
 Plugins\Compiled\AdvancedUberLabLayout\CachedImages
 Plugins\Compiled\Ninja Pricer\NinjaData
 Plugins\Compiled\FullRareSetManager\StashData.json
