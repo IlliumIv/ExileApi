@@ -151,3 +151,6 @@
 [submodule "Plugins/Source/OnlyGoodMaps"]
 	path = Plugins/Source/OnlyGoodMaps
 	url = https://github.com/vadash/OnlyGoodMaps
+[submodule "Plugins/Source/EssenceDrainContagion"]
+	path = Plugins/Source/EssenceDrainContagion
+	url = https://github.com/IlliumIv/EssenceDrainContagion
