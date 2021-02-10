@@ -148,9 +148,12 @@
 [submodule "Plugins/Source/UnstackDecks"]
 	path = Plugins/Source/UnstackDecks
 	url = https://github.com/IlliumIv/UnstackDecks
-[submodule "Plugins/Source/OnlyGoodMaps"]
-	path = Plugins/Source/OnlyGoodMaps
-	url = https://github.com/vadash/OnlyGoodMaps
 [submodule "Plugins/Source/EssenceDrainContagion"]
 	path = Plugins/Source/EssenceDrainContagion
 	url = https://github.com/IlliumIv/EssenceDrainContagion
+[submodule "Plugins/Source/It's a trap!"]
+	path = Plugins/Source/It's a trap!
+	url = https://github.com/IlliumIv/Its_a_trap
+[submodule "Plugins/Source/OnlyGoodMaps"]
+	path = Plugins/Source/OnlyGoodMaps
+	url = https://github.com/IlliumIv/OnlyGoodMaps
