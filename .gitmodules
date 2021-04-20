@@ -157,3 +157,6 @@
 [submodule "Plugins/Source/OnlyGoodMaps"]
 	path = Plugins/Source/OnlyGoodMaps
 	url = https://github.com/IlliumIv/OnlyGoodMaps
+[submodule "Plugins/Source/EZVendor"]
+	path = Plugins/Source/EZVendor
+	url = https://github.com/IlliumIv/EZVendor
