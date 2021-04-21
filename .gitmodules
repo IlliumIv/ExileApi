@@ -160,3 +160,6 @@
 [submodule "Plugins/Source/EZVendor"]
 	path = Plugins/Source/EZVendor
 	url = https://github.com/IlliumIv/EZVendor
+[submodule "Plugins/Source/SpectreBodies"]
+	path = Plugins/Source/SpectreBodies
+	url = https://github.com/IlliumIv/SpectreBodies
