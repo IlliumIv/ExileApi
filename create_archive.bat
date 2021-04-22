@@ -1,6 +1,8 @@
 cd ..\PoeHelper
 del ExileCore.dll
 del GameOffsets.dll
+del Loader.exe
+copy ..\ExileApi\Loader.exe Loader.exe
 del PoeHelper.7z
 del PoeHelper.7z.*
 "C:\Program Files\7-Zip\7z.exe" u -x@..\ExileApi\archive_exclude.txt PoeHelper.7z *
