@@ -163,3 +163,6 @@
 [submodule "Plugins/Source/MapNotify"]
 	path = Plugins/Source/MapNotify
 	url = https://github.com/IlliumIv/MapNotify
+[submodule "Plugins/Source/Exertion"]
+	path = Plugins/Source/Exertion
+	url = https://github.com/Lachrymatory/Exertion
