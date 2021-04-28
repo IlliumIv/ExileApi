@@ -219,3 +219,5 @@ project.lock.json
 # 3.12 Ignore
 ExileCore.dll
 GameOffsets.dll
+
+modules/*

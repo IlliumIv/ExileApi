@@ -67,9 +67,6 @@
 [submodule "Plugins/Source/MapsExchange"]
 	path = Plugins/Source/MapsExchange
 	url = https://github.com/IlliumIv/MapsExchange
-[submodule "Plugins/Source/MapNotify"]
-	path = Plugins/Source/MapNotify
-	url = https://github.com/Lachrymatory/MapNotify.git
 [submodule "Plugins/Source/ItemAlert"]
 	path = Plugins/Source/ItemAlert
 	url = https://github.com/IlliumIv/ItemAlert
@@ -163,3 +160,6 @@
 [submodule "Plugins/Source/SpectreBodies"]
 	path = Plugins/Source/SpectreBodies
 	url = https://github.com/IlliumIv/SpectreBodies
+[submodule "Plugins/Source/MapNotify"]
+	path = Plugins/Source/MapNotify
+	url = https://github.com/IlliumIv/MapNotify

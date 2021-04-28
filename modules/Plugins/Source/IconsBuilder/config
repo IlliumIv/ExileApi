@@ -1,0 +1,26 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	worktree = ../../../../../Plugins/Source/IconsBuilder
+[remote "origin"]
+	url = https://github.com/IlliumIv/IconsBuilder
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "TehCheat"]
+	url = https://github.com/TehCheat/IconsBuilder
+	fetch = +refs/heads/*:refs/remotes/TehCheat/*
+[remote "Arecurius0"]
+	url = https://github.com/Arecurius0/IconsBuilder
+	fetch = +refs/heads/*:refs/remotes/Arecurius0/*
+[remote "snowhawk04"]
+	url = https://github.com/snowhawk04/IconsBuilder
+	fetch = +refs/heads/*:refs/remotes/snowhawk04/*
+[remote "OneGitStep"]
+	url = https://github.com/OneGitStep/IconsBuilder
+	fetch = +refs/heads/*:refs/remotes/OneGitStep/*

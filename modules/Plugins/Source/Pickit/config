@@ -1,0 +1,20 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	worktree = ../../../../../Plugins/Source/Pickit
+[remote "origin"]
+	url = https://github.com/IlliumIv/Pickit.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "Xcesius"]
+	url = https://github.com/Xcesius/Pickit
+	fetch = +refs/heads/*:refs/remotes/Xcesius/*
+[remote "Macaddict42"]
+	url = https://github.com/Macaddict42/Pickit
+	fetch = +refs/heads/*:refs/remotes/Macaddict42/*

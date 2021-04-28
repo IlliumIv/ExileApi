@@ -1,0 +1,23 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	worktree = ../../../../../Plugins/Source/BasicFlaskRoutine
+[remote "origin"]
+	url = https://github.com/IlliumIv/BasicFlaskRoutine.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "Arecurius0"]
+	url = https://github.com/Arecurius0/BasicFlaskRoutine
+	fetch = +refs/heads/*:refs/remotes/Arecurius0/*
+[remote "vadash"]
+	url = https://github.com/vadash/BasicFlaskRoutine
+	fetch = +refs/heads/*:refs/remotes/vadash/*
+[remote "sychotixdev"]
+	url = https://github.com/sychotixdev/BasicFlaskRoutine
+	fetch = +refs/heads/*:refs/remotes/sychotixdev/*

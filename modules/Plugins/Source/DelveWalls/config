@@ -1,0 +1,20 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	worktree = ../../../../../Plugins/Source/DelveWalls
+[remote "origin"]
+	url = https://github.com/IlliumIv/DelveWalls
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "vadash"]
+	url = https://github.com/vadash/DelveWalls
+	fetch = +refs/heads/*:refs/remotes/vadash/*
+[remote "SquirrelRat"]
+	url = https://github.com/SquirrelRat/DelveWalls
+	fetch = +refs/heads/*:refs/remotes/SquirrelRat/*

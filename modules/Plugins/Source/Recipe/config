@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	worktree = ../../../../../Plugins/Source/Recipe
+[remote "origin"]
+	url = https://github.com/IlliumIv/Recipe
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[lfs "https://github.com/IlliumIv/Recipe.git/info/lfs"]
+	access = basic
