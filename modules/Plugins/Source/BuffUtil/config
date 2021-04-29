@@ -9,15 +9,15 @@
 [remote "origin"]
 	url = https://github.com/IlliumIv/BuffUtil
 	fetch = +refs/heads/*:refs/remotes/origin/*
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
 [remote "0xE0D59"]
 	url = https://github.com/0xE0D59/BuffUtil
 	fetch = +refs/heads/*:refs/remotes/0xE0D59/*
 [remote "Macaddict42"]
 	url = https://github.com/Macaddict42/BuffUtil
 	fetch = +refs/heads/*:refs/remotes/Macaddict42/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
 [branch "dev/0xE0D59"]
 	remote = origin
 	merge = refs/heads/dev/0xE0D59

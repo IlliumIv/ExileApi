@@ -7,7 +7,7 @@
 	ignorecase = true
 	worktree = ../../../../../Plugins/Source/Exertion
 [remote "origin"]
-	url = https://github.com/Lachrymatory/Exertion
+	url = https://github.com/IlliumIv/Exertion
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin

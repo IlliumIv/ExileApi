@@ -130,9 +130,6 @@
 [submodule "Plugins/Source/GemUp"]
 	path = Plugins/Source/GemUp
 	url = https://github.com/IlliumIv/GemUp
-[submodule "Plugins/Source/BuffUtil"]
-	path = Plugins/Source/BuffUtil
-	url = https://github.com/IlliumIv/BuffUtil
 [submodule "Plugins/Source/DevTree"]
 	path = Plugins/Source/DevTree
 	url = https://github.com/IlliumIv/DevTree
@@ -166,3 +163,6 @@
 [submodule "Plugins/Source/Exertion"]
 	path = Plugins/Source/Exertion
 	url = https://github.com/Lachrymatory/Exertion
+[submodule "Plugins/Source/BuffUtil"]
+	path = Plugins/Source/BuffUtil
+	url = https://github.com/IlliumIv/BuffUtil
