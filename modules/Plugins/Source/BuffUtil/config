@@ -18,6 +18,6 @@
 [remote "Macaddict42"]
 	url = https://github.com/Macaddict42/BuffUtil
 	fetch = +refs/heads/*:refs/remotes/Macaddict42/*
-[branch "root"]
+[branch "dev/0xE0D59"]
 	remote = origin
-	merge = refs/heads/root
+	merge = refs/heads/dev/0xE0D59

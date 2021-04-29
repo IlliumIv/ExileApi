@@ -18,3 +18,6 @@
 [remote "DetectiveSquirrel"]
 	url = https://github.com/DetectiveSquirrel/Get-Chaos-Value
 	fetch = +refs/heads/*:refs/remotes/DetectiveSquirrel/*
+[branch "dev/DetectiveSquirrel"]
+	remote = origin
+	merge = refs/heads/dev/DetectiveSquirrel
