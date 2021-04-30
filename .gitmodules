@@ -166,3 +166,6 @@
 [submodule "Plugins/Source/BuffUtil"]
 	path = Plugins/Source/BuffUtil
 	url = https://github.com/IlliumIv/BuffUtil
+[submodule "Plugins/Source/BroodyHen"]
+	path = Plugins/Source/BroodyHen
+	url = https://github.com/IlliumIv/BroodyHen
