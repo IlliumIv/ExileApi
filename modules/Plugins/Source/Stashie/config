@@ -18,3 +18,9 @@
 [remote "Macaddict42"]
 	url = https://github.com/Macaddict42/Stashie
 	fetch = +refs/heads/*:refs/remotes/Macaddict42/*
+[remote "snowhawk04"]
+	url = https://github.com/snowhawk04/Stashie
+	fetch = +refs/heads/*:refs/remotes/snowhawk04/*
+[remote "vadash"]
+	url = https://github.com/vadash/Stashie
+	fetch = +refs/heads/*:refs/remotes/vadash/*
