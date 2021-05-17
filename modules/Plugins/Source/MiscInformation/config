@@ -15,3 +15,6 @@
 [remote "TheOptimisticFactory"]
 	url = https://github.com/TheOptimisticFactory/MiscInformation
 	fetch = +refs/heads/*:refs/remotes/TheOptimisticFactory/*
+[remote "TehCheat"]
+	url = https://github.com/TehCheat/MiscInformation
+	fetch = +refs/heads/*:refs/remotes/TehCheat/*

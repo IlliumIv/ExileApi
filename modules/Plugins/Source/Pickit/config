@@ -21,3 +21,6 @@
 [remote "vadash"]
 	url = https://github.com/vadash/Pickit
 	fetch = +refs/heads/*:refs/remotes/vadash/*
+[remote "TehCheat"]
+	url = https://github.com/TehCheat/Pickit
+	fetch = +refs/heads/*:refs/remotes/TehCheat/*

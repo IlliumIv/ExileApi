@@ -24,3 +24,6 @@
 [remote "vadash"]
 	url = https://github.com/vadash/Stashie
 	fetch = +refs/heads/*:refs/remotes/vadash/*
+[remote "TehCheat"]
+	url = https://github.com/TehCheat/Stashie
+	fetch = +refs/heads/*:refs/remotes/TehCheat/*
