@@ -1,4 +1,4 @@
-### Heist update:
+### 3.12 Heist update:
 ### Now require up-to-date GameOffsets.dll and ExileCore.dll by TehCheat.
 
 # You probably should not use this repo cause it is have not changes with TehCheat/ExileApi.
